@@ -4,13 +4,13 @@ terraform {
   ## YOU WILL UNCOMMENT THIS CODE THEN RERUN TERRAFORM INIT
   ## TO SWITCH FROM LOCAL BACKEND TO REMOTE AWS BACKEND
   #############################################################
-#   backend "s3" {
-#     bucket         = "devops-directive-tf-state-randall-codes4" # REPLACE WITH YOUR BUCKET NAME
-#     key            = "03-basics/import-bootstrap/terraform.tfstate"
-#     region         = "us-east-1"
-#     dynamodb_table = "terraform-state-locking-randall-codes4"
-#     encrypt        = true
-#   }
+   backend "s3" {
+     bucket         = "devops-directive-tf-state-randall-codes4" # REPLACE WITH YOUR BUCKET NAME
+     key            = "03-basics/import-bootstrap/terraform.tfstate"
+     region         = "us-east-1"
+     dynamodb_table = "terraform-state-locking-randall-codes4"
+     encrypt        = true
+   }
 
   required_providers {
     aws = {
