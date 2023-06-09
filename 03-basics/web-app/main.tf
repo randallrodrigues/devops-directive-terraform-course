@@ -2,10 +2,10 @@ terraform {
   # Assumes s3 bucket and dynamo DB table already set up
   # See /code/03-basics/aws-backend
   backend "s3" {
-    bucket         = "devops-directive-tf-state-randall-codes3"
+    bucket         = "devops-directive-tf-state-randall-codes4"
     key            = "03-basics/web-app/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-state-locking"
+    dynamodb_table = "terraform-state-locking-randall-codes4"
     encrypt        = true
   }
 
@@ -44,7 +44,7 @@ resource "aws_instance" "instance_2" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket_prefix = "devops-directive-web-app-data"
+  bucket_prefix = "devops-directive-web-app-data-randall-codes4"
   force_destroy = true
 }
 
