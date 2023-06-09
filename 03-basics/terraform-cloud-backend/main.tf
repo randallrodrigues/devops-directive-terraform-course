@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    organization = "devops-directive"
+    organization = "rtech-www-prod"
 
     workspaces {
-      name = "devops-directive-terraform-course"
+      name = "devops-directive-terraform-course-randall-codes4"
     }
   }
 
